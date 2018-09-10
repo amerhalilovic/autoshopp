@@ -1,0 +1,43 @@
+<div id="items-container" class="col-sm-9">
+</div>
+<div class="col-sm-3">
+    <div class="panel panel-primary" id="cart-panel">
+        <div class="panel-heading">Cart</div>
+        <div class="panel-body">
+            <div id="cart-items"></div>
+            <h4>Total: $<span id="cart-total">0</span></h5>
+        </div>
+        <div class="panel-footer">
+          <button type="button" class="btn btn-danger" id="button-cart-clear">Clear Cart</button>
+          <button type="button" class="btn btn-primary" id="button-cart-order">Make Order</button>
+        </div>
+    </div>
+</div>
+
+<template id="item-template">
+  <div class="col-sm-4">
+      <div class="panel panel-primary">
+          <div class="panel-heading item-name"></div>
+          <div class="panel-body">
+              <img class="img-responsive item-image" style="width:100%">
+              <h3 class="item-name"/>
+              <p class="item-description"/>
+              <h2>$<span class="item-price"></span></h2>
+          </div>
+          <div class="panel-footer">
+              <button type="button" class="btn btn-info btn-add-cart">Add To Cart</button>
+          </div>
+      </div>
+  </div>
+</template>
+
+<template id="cart-item-template">
+    <div>
+        <span class="item-name"></span>
+        <span class="glyphicon glyphicon-remove button-remove" style="float: right;"></span>
+        <span class="item-price" style="float: right; margin-right: 10px;"></span>
+    </div>
+</template>
+
+
+<script src="./js/items.js"></script>

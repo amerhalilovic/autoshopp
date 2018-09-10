@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AUTO shop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/spapp.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <script src="./js/jquery.spapp.js"></script>
+    <script src="./js/index.js"></script>
+
+  </head>
+
+
+  <body>
+    <style >
+      .navbar-inverse {
+        background-color: #337ab7;
+        border-color: #337ab7;
+                      }
+      .navbar-inverse .navbar-nav>li>a {
+        color: #fff;
+                                    }
+      .navbar-inverse .navbar-brand {
+        color: #000000;
+                                    }
+      .btn-info {
+        color: #fff;
+        background-color: #337ab7;
+        border-color: #000000;
+                }
+      .panel-primary>.panel-heading {
+        color: #fff;
+        background-color: #337ab7;
+        border-color: #000000;
+                                    }
+    </style>
+    <div class="alert alert-info alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      <strong>Page is opened at </strong>  <script>
+
+          document.write(Date());
+      </script>
+  </div>
+
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#items">AUTO Shop</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="#items" >Shop Items</a></li>
+            <li><a href="#register">Register</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a id="button-show-login"><span class="glyphicon glyphicon-user"></span> <span id="button-login-text">Login</span></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <main id="spapp" role="main">
+          <section id="register" data-load="register.html"></section>
+          <section id="items" data-load="items.html"></section>
+        </main>
+      </div>
+    </div>
+  <!-- Login Modal -->
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalTitle">Login</h5>
+          </div>
+          <div class="modal-body">
+            <form id="login-form">
+              <div class="form-group">
+                <label for="register-email">Username</label>
+                <input type="text" class="form-control" id="login-username" name="username" aria-describedby="emailHelp" placeholder="Username">
+              </div>
+              <div class="form-group">
+                <label for="register-password">Password</label>
+                <input type="password" class="form-control" id="login-password" name="password" placeholder="Password">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-info" id="button-login">Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- message modal -->
+    <div class="modal fade" id="message-modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- question modal -->
+    <div class="modal fade" id="question-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="button-question-yes">YES</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" id="button-question-no">NO</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </body>
+</html>
